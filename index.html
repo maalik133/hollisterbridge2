@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hollister Reward</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f8fa;
+      color: #1f2933;
+      min-height: 100vh;
+      padding: 22px 14px;
+    }
+
+    .page {
+      max-width: 430px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      text-align: center;
+      font-size: 34px;
+      letter-spacing: 6px;
+      font-weight: 800;
+      margin-top: 18px;
+      margin-bottom: 22px;
+      color: #263543;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+      border: 1px solid #e6e9ed;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.12;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #263543;
+    }
+
+    .sub {
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.45;
+      color: #596575;
+      margin-bottom: 22px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: #f8fafc;
+      border: 1px solid #e4e8ee;
+      padding: 14px;
+      border-radius: 14px;
+    }
+
+    .check {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      border-radius: 50%;
+      background: #263543;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+      color: #263543;
+    }
+
+    .step span {
+      display: block;
+      font-size: 13px;
+      line-height: 1.35;
+      color: #657181;
+    }
+
+    .next-box {
+      background: #f8fafc;
+      border: 1px solid #e4e8ee;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 18px;
+    }
+
+    .next-box h2 {
+      font-size: 17px;
+      margin-bottom: 6px;
+      color: #263543;
+    }
+
+    .next-box p {
+      font-size: 14px;
+      line-height: 1.45;
+      color: #657181;
+    }
+
+    .cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #263543;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 17px 14px;
+      border-radius: 14px;
+      box-shadow: 0 8px 18px rgba(38,53,67,0.25);
+      margin-bottom: 10px;
+    }
+
+    .small-note {
+      text-align: center;
+      font-size: 11px;
+      color: #7b8794;
+      line-height: 1.35;
+      margin-bottom: 22px;
+    }
+
+    .faq-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #263543;
+      margin-bottom: 12px;
+    }
+
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    details {
+      background: #ffffff;
+      border: 1px solid #e4e8ee;
+      border-radius: 13px;
+      padding: 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 800;
+      color: #263543;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 20px;
+      font-weight: 700;
+      color: #263543;
+    }
+
+    details[open] summary::after {
+      content: "-";
+    }
+
+    details p {
+      margin-top: 10px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #657181;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 10px;
+      color: #8b95a1;
+      line-height: 1.45;
+      margin-top: 18px;
+      padding-bottom: 20px;
+    }
+
+    .sticky {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(247,248,250,0.94);
+      backdrop-filter: blur(8px);
+      padding: 10px 14px 14px;
+      border-top: 1px solid #e4e8ee;
+    }
+
+    .sticky-inner {
+      max-width: 430px;
+      margin: 0 auto;
+    }
+
+    .sticky .cta {
+      margin: 0;
+      padding: 15px 14px;
+      font-size: 16px;
+    }
+
+    .spacer {
+      height: 78px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="brand">HOLLISTER</div>
+
+    <div class="card">
+      <h1>Claim your $500 Hollister Gift Card</h1>
+
+      <p class="sub">
+        This quick page explains what to expect before continuing to the next step.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="check">✓</div>
+          <div>
+            <strong>Start the reward process</strong>
+            <span>Continue to the next page and enter a valid email to begin.</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="check">✓</div>
+          <div>
+            <strong>Complete required deals</strong>
+            <span>Most users may need to complete around 3–5 deals, such as surveys, app installs, trials, or similar offers.</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="check">✓</div>
+          <div>
+            <strong>Must be 18+ to participate</strong>
+            <span>Eligibility and offer paths may vary by user.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="next-box">
+        <h2>What happens next?</h2>
+        <p>
+          You’ll continue to the next page, follow the required steps, and complete the deals shown to you in order to qualify.
+        </p>
+      </div>
+
+      <a class="cta" href="YOUR_OFFER_LINK_HERE">Unlock My Gift Card →</a>
+
+      <p class="small-note">
+        Eligibility and completion requirements apply. This page is for informational purposes before continuing.
+      </p>
+
+      <div class="faq-title">Frequently Asked Questions</div>
+
+      <div class="faq">
+        <details>
+          <summary>How do I get the discount?</summary>
+          <p>
+            Tap the button above, enter a valid email, and follow the steps shown on the next page.
+          </p>
+        </details>
+
+        <details>
+          <summary>How many deals do I have to do?</summary>
+          <p>
+            It can vary, but most users may need to complete around 3–5 required deals to qualify.
+          </p>
+        </details>
+
+        <details>
+          <summary>How long does it take?</summary>
+          <p>
+            It depends on the deals shown to you. Some are quick, while others may take longer.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do I have to be 18?</summary>
+          <p>
+            Yes. You must be 18 or older to participate.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is this location based?</summary>
+          <p>
+            Availability and eligibility can vary depending on the user and offer path.
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div class="footer">
+      This page is not owned by or affiliated with Hollister Co. Brand names are used for identification purposes only.
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+
+  <div class="sticky">
+    <div class="sticky-inner">
+      <a class="cta" href="https://giftclick.org/aff_c?offer_id=2768&aff_id=170653&source=testlander2">Continue to Next Step →</a>
+    </div>
+  </div>
+</body>
+</html>
